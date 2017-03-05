@@ -1,0 +1,97 @@
+
+* {
+  border-radius: 0 !important;
+}
+
+.center{
+  text-align: center;
+}
+
+.left{
+  text-align: left;
+}
+
+.right{
+  text-align: right;
+}
+
+.bg img{
+  width: auto;
+  height: auto;
+}
+
+.white{
+  color: white;
+}
+
+.general{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.head{
+  width: 250px;
+  height: 250px;
+}
+
+.team{
+  padding-top: 20px;
+}
+
+.full-page {
+	height: 100%;
+	width: 100%;
+}
+
+.vertical-line-L {
+  border-left: 0.5px solid #E6E6E6;
+}
+
+/* Sweep To Right from hover.css */
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  border-color: #F47B20;
+}
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #F47B20;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
+  color: white;
+}
+.hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.img-circle {
+    border-radius: 50% !important;
+    border-style: solid;
+    border-width: 6px;
+    border-color: #F5A051;
+}
