@@ -1,76 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WaveBank</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/chart.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </head>
-  <body style="padding-top: 70px;">
-    <div class="navbar navbar-fixed-top navbar-light bg-faded" style="background-color:#7D7DBB">
-        <a class="navbar-brand">
-            <img style="width:36px; height:36px" src="img/logo.png">Wave Bank
-        </a>
-        <ul class="nav navbar-nav" style="float:right">
-            <li class="nav-item">
-                <a class="nav-link">Graph</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">Output</a>
-            </li>
-        </ul>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WaveBank</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" media="screen"
+  href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/chart.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body style="padding-top: 70px;">
+  <div class="navbar navbar-fixed-top navbar-light bg-faded" style="background-color:#7D7DBB">
+    <a class="navbar-brand">
+      <img style="width:36px; height:36px" src="img/logo.png">Wave Bank
+    </a>
+    <ul class="nav navbar-nav" style="float:right">
+      <li class="nav-item">
+        <a class="nav-link">Graph</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Output</a>
+      </li>
+    </ul>
+  </div>
+
+  <section>
+    <div class="row-fluid">
+      <div class="col-sm-12">
+      <h1 style="text-align: center;">Start Date</h1>
     </div>
-    <section>
-      <script>
-        var myChart = new Chart({...});
-        var ctx = "myChart";
-      </script>
-      <canvas id="myChart" width="800" height="800"></canvas>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <div class="container center">
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Output
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">CSV</a></li>
-            <li><a href="#">JSON</a></li>
-          </ul>
-        </div>
+  <section style="height: 300px;margin-top: 200px;">
+    <div class="row-fluid">
+      <div class="col-md-4">
+        <select class="cf_inputbox" id="year1" class="dropdown" size="1" title="" name="year">
+          <option value="" type='hidden'>Year</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+        </select>
       </div>
-    </section>
-
-
-    <section>
-      <footer class="center">
-        <div class="container-fluid white" style="background-color:#7D7DBB;">
-         <div style="padding-top:36px; padding-bottom:36px;">Designed and Coded by <a class="page-scroll" href = "#" style="color: #2B343D;"> Marel O'Neil, Curtis Chong, Kevin Shen, Simon Guo</a>, on <a href="https://github.com/simonguozirui/WaveBank" target="_blank"><i style="color:#2B343D" class="fa fa-github fa-lg"></i></a> with <i class="fa fa-code fa-lg"></i></div>
+      <div class="col-md-4">
+        <select class="cf_inputbox" id="month1" class="dropdown" size="1" title="" name="month">
+          <option value="" type='hidden'>Month</option>
+          <option value="1">Jan</option>
+          <option value="2">Feb</option>
+          <option value="3">Mar</option>
+          <option value="4">Apr</option>
+          <option value="5">May</option>
+          <option value="6">Jun</option>
+          <option value="7">Jul</option>
+          <option value="8">Aug</option>
+          <option value="9">Sep</option>
+          <option value="10">Oct</option>
+          <option value="11">Nov</option>
+          <option value="12">Dec</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select class="cf_inputbox" id="day1" class="dropdown" size="1" title="" name="month">
+          <option value="" type='hidden'>Day</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+      </div>
+      </section>
+      <section>
+        <div class="row-fluid">
+          <div class="col-sm-12">
+          <h1 style="text-align: center;">End Date</h1>
         </div>
-      </footer>
-    </section>
+        </div>
+      </section>
 
-    <!--google-analytics-->
-    <script>
+      <section style="height: 300px;margin-top: 200px;">
+        <div class="row-fluid">
+          <div class="col-md-4">
+            <select class="cf_inputbox" id="year2" class="dropdown" size="1" title="" name="year">
+              <option value="" type='hidden'>Year</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="cf_inputbox" id="month2" class="dropdown" size="1" title="" name="month">
+              <option value="" type='hidden'>Month</option>
+              <option value="1">Jan</option>
+              <option value="2">Feb</option>
+              <option value="3">Mar</option>
+              <option value="4">Apr</option>
+              <option value="5">May</option>
+              <option value="6">Jun</option>
+              <option value="7">Jul</option>
+              <option value="8">Aug</option>
+              <option value="9">Sep</option>
+              <option value="10">Oct</option>
+              <option value="11">Nov</option>
+              <option value="12">Dec</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="cf_inputbox" id="day2" class="dropdown" size="1" title="" name="month">
+              <option value="" type='hidden'>Day</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+          </div>
+          </section>
+
+      <section style="height: 300px;">
+        <div class="container center">
+          <div class="row-fluid">
+            <div class="col-md-6">
+              <div class="btn btn-default" id="csvbutton">CSV</div>
+            </div>
+            <div class="col-md-6">
+              <div class="btn btn-default">JSON</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section>
+        <footer class="center">
+          <div class="container-fluid white" style="background-color:#7D7DBB;">
+            <div style="padding-top:36px; padding-bottom:36px;">Designed and Coded by <a class="page-scroll" href = "#" style="color: #2B343D;"> Marel O'Neil, Curtis Chong, Kevin Shen, Simon Guo</a>, on <a href="https://github.com/simonguozirui/WaveBank" target="_blank"><i style="color:#2B343D" class="fa fa-github fa-lg"></i></a> with <i class="fa fa-code fa-lg"></i></div>
+          </div>
+        </footer>
+      </section>
+
+      <!--google-analytics-->
+      <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-92499503-1', 'auto');
       ga('send', 'pageview');
-    </script>
-  </body>
-</html>
+      </script>
+    </body>
+    </html>
