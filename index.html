@@ -20,6 +20,7 @@
   <script src="js/chart.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
+
 </head>
 <body style="padding-top:70px;">
   <div class="navbar navbar-fixed-top navbar-light bg-faded white" style="background-color:#28779D" >
@@ -45,10 +46,11 @@
 
   <section class="center">
     <h1>Graph</h1>
-    <div class="row-fluid">
+      <br>
       <div class="col-3" style="display:inline">
         <h2>Start Date</h2>
       </div>
+      <div class="row-fluid">
       <div class="col-3 styled-select slate">
         <select class="cf_inputbox" id="year1" class="dropdown" size="1" title="" name="year">
           <option value="" type='hidden'>Year</option>
@@ -113,14 +115,14 @@
       </div>
     </div>
   </section>
-
+  <br>
   <section class="center">
-    <div class="row">
-      <div class="col-lg-3" style="display:inline">
+      <div>
         <h2>End Date</h2>
       </div>
+      <div class="row">
       <div class="col-3 styled-select slate">
-        <select class="cf_inputbox" id="year1" class="dropdown" size="1" title="" name="year">
+        <select class="cf_inputbox" id="year2" class="dropdown" size="1" title="" name="year">
           <option value="" type='hidden'>Year</option>
           <option value="2017">2017</option>
           <option value="2018">2018</option>
@@ -129,7 +131,7 @@
         </select>
       </div>
       <div class="col-3 styled-select slate">
-        <select class="cf_inputbox" id="month1" class="dropdown" size="1" title="" name="month">
+        <select class="cf_inputbox" id="month2" class="dropdown" size="1" title="" name="month">
           <option value="" type='hidden'>Month</option>
           <option value="1">Jan</option>
           <option value="2">Feb</option>
@@ -146,7 +148,7 @@
         </select>
       </div>
       <div class="col-3 styled-select slate">
-        <select class="cf_inputbox" id="day1" class="dropdown" size="1" title="" name="month">
+        <select class="cf_inputbox" id="day2" class="dropdown" size="1" title="" name="month">
           <option value="" type='hidden'>Day</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -183,9 +185,11 @@
       </div>
     </div>
   </section>
-
-
-
+  <br>
+  <div class="row">
+  <button id="csvbutton" type="button" style="margin-left: 720px; position:relative" class="btn btn-default center">Download</button>
+</div>
+  <br>
   <section>
     <footer class="center">
       <div class="container-fluid" style="background-color:#538A49;">
